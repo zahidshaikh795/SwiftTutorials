@@ -92,22 +92,22 @@ default:
 }
 
 let interestingNumbers = [
-    "Prime": [2, 3, 5, 7, 11, 13,76],
+    "Prime": [2, 3, 5, 7, 11, -13,76],
     "Fibonacci": [1, 1, 2, 3, 5, 8],
     "Square": [1, 4, 9, 16, 25],
 ]
-var largest = 0
+var smallest = 0
 var larKind:String?
 larKind = nil
 for (kind, numbers) in interestingNumbers {
     for number in numbers {
-        if number > largest {
-            largest = number
+        if number < smallest {
+            smallest = number
             larKind=kind
         }
     }
 }
-print(largest)
+print(smallest)
 print(larKind!)
 
 var n = 2
@@ -171,5 +171,109 @@ func averageOf(numbers: Int...) -> Int {
     }
     return average
 }
-let sum = averageOf(numbers: 10, 20, 30)
-print(sum)
+let average = averageOf(numbers: 10, 200, 30)
+print(average)
+
+func returnFifteen() -> Int {
+    var y = 10
+    func add() {
+        y += 5
+    }
+    add()
+    return y
+}
+returnFifteen()
+
+func hasAnyMatches(list: [Int], condition: (Int) -> Bool) -> Bool {
+    for item in list {
+        if condition(item) {
+            return true
+        }
+    }
+    return false
+}
+func lessThanTen(number: Int) -> Bool {
+    return number < 10
+}
+var numbers = [20, 19, 17, 12,2]
+hasAnyMatches(list: numbers, condition: lessThanTen)
+//Object and Class
+
+/*class NamedShape {
+    var numberOfSides: Int = 0
+    var name: String
+    
+    init(name: String) {
+        self.name = name
+    }
+    
+    func simpleDescription() -> String {
+        return "A shape with \(numberOfSides) sides."
+    }
+}
+class Square: NamedShape {
+    var sideLength: Double
+    
+    init(sideLength: Double, name: String) {
+        self.sideLength = sideLength
+        super.init(name: name)
+        numberOfSides = 4
+        }
+    
+    func area() ->  Double {
+        return sideLength * sideLength
+    }
+    
+    override func simpleDescription() -> String {
+        return "A square with sides of length \(sideLength)."
+    }
+}
+let test = Square(sideLength: 5.2, name: "my test square")
+test.area()
+test.simpleDescription()
+
+class Circle:NamedShape{
+    var sideLength:Double
+    init(sideLength:Double,name: String) {
+    self.sideLength = sideLength
+        super.init(name: name)
+        numberOfSides = 0
+    }
+    func area() -> Double {
+        return 3.14*sideLength*sideLength
+    }
+    override func simpleDescription() -> String {
+        return "A cicrcle with radius of length \(sideLength)."
+    }
+}
+let test1 = Circle(sideLength:7,name:"my test circle")
+print(test1.area())
+print(test1.simpleDescription())*/
+var friendlyWelcome = "Hello!"
+friendlyWelcome = "Bonjour!"
+print(friendlyWelcome)
+let blackHeart = "\u{1F496}";print(blackHeart)
+
+
+
+
+//“Tuples group multiple values into a single compound value. ”
+
+let http404Error = (404, "Not Found")
+// http404Error is of type (Int, String), and equals (404, "Not Found")”
+
+print(http404Error)
+let (statusCode, statusMessage) = http404Error
+print("The status code is \(statusCode)")
+// Prints "The status code is 404"
+print("The status message is \(statusMessage)")
+// Prints "The status message is Not Found”
+
+let http200Status = (statusCode: 200, description: "OK")
+
+let possibleNumber = "123"
+let convertedNumber = Int(possibleNumber)
+print(convertedNumber ?? "hello")
+// !-->Exclamation mark
+
+
