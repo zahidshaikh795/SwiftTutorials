@@ -4,11 +4,6 @@ import UIKit
 
 //Constants and Variables
 
-
-
-
-
-
 let iu:Float = 90
 let str = "hello \(iu) world ."
 
@@ -52,9 +47,10 @@ print(fruitSummary)
 print(explicitFloat)
 print(widthLabel)
 print(shoppingList[1])
-print(occupations["Jayne"]!)
+print(occupations["Jayne"] as Any)
 print(occupations["Kaylee"]!)
 print(emptyArray)
+
 let individualScores = [5, 43, 103, 87, 102,09]
 var teamScore = 0
 for marks in individualScores {
@@ -101,7 +97,8 @@ let interestingNumbers = [
     "Square": [1, 4, 9, 16, 25],
 ]
 var largest = 0
-var larKind = "nil"
+var larKind:String?
+larKind = nil
 for (kind, numbers) in interestingNumbers {
     for number in numbers {
         if number > largest {
@@ -111,7 +108,7 @@ for (kind, numbers) in interestingNumbers {
     }
 }
 print(largest)
-print(larKind)
+print(larKind!)
 
 var n = 2
 while n < 100 {
@@ -136,10 +133,13 @@ func greet(person: String, dish: String) -> String {
 }
 greet(person: "Bob", dish: "Bade ki khichdi")
 
-func greet(_ person: String, on day: String) -> String {
+func greet(_ person: String,_ day: String) -> String {
     return "Hello \(person), today is \(day)."
 }
-greet("John", on: "Wednesday")
+
+let msg = greet("John", "Wednesday")
+print(msg)
+
 func calculateStatistics(scores: [Int]) -> (min: Int, max: Int, sum: Int) {
     var min = scores[0]
     var max = scores[0]
@@ -158,3 +158,18 @@ func calculateStatistics(scores: [Int]) -> (min: Int, max: Int, sum: Int) {
 let statistics = calculateStatistics(scores: [5, 3, 100, 3, 9])
 print(statistics.sum)
 print(statistics)
+
+func averageOf(numbers: Int...) -> Int {
+    var sum = 0
+    var average = 0
+    for number in numbers {
+        sum += number
+        let size = numbers.count
+        average = sum/size
+
+       
+    }
+    return average
+}
+let sum = averageOf(numbers: 10, 20, 30)
+print(sum)
