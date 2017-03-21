@@ -276,4 +276,31 @@ let convertedNumber = Int(possibleNumber)
 print(convertedNumber ?? "hello")
 // !-->Exclamation mark
 
+var str1 = String()+"not empy"
+if str1.isEmpty {
+    print("string is empty")
+}else{
+    print(str1)
+}
+for character in "hello how r u !".characters{
+print(character)
+}
+var fiveInts=Array(repeating:3,count:15)
+print(fiveInts)
+ fiveInts[2...10] = [4,4,4,4,4,4,4,4,4]    //subscript
+fiveInts.insert(34, at: 3)
+fiveInts.insert(34, at: 16)
+fiveInts.remove(at: 16)
+print(fiveInts)
+for item in fiveInts
+{
+print(item)
+}
+let base = 5
+let power = 3
+var answer = 1
+for _ in 1...power {
+    answer *= base
+}
+print("\(base) to the power of \(power) is \(answer)")
 
