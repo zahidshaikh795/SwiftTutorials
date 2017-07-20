@@ -47,6 +47,10 @@
 		8167A8B61E7FC36A00FF583F /* SwiftTutorialsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftTutorialsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8167A8BA1E7FC36A00FF583F /* SwiftTutorialsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTutorialsUITests.swift; sourceTree = "<group>"; };
 		8167A8BC1E7FC36A00FF583F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81F320871F1F18FE00BA3269 /* Inheritance.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Inheritance.playground; sourceTree = "<group>"; };
+		81F320881F1F18FE00BA3269 /* OptionalsPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = OptionalsPlayground.playground; sourceTree = "<group>"; };
+		81F320891F1F18FE00BA3269 /* Polymorphism.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Polymorphism.playground; sourceTree = "<group>"; };
+		81F3208A1F1F1B0600BA3269 /* Test.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Test.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 		8167A8991E7FC36900FF583F /* SwiftTutorials */ = {
 			isa = PBXGroup;
 			children = (
+				81F320861F1F18C600BA3269 /* PlayGround */,
 				8167A89A1E7FC36A00FF583F /* AppDelegate.swift */,
 				8167A89C1E7FC36A00FF583F /* ViewController.swift */,
 				8167A89E1E7FC36A00FF583F /* Main.storyboard */,
@@ -123,6 +128,17 @@
 				8167A8BC1E7FC36A00FF583F /* Info.plist */,
 			);
 			path = SwiftTutorialsUITests;
+			sourceTree = "<group>";
+		};
+		81F320861F1F18C600BA3269 /* PlayGround */ = {
+			isa = PBXGroup;
+			children = (
+				81F3208A1F1F1B0600BA3269 /* Test.playground */,
+				81F320871F1F18FE00BA3269 /* Inheritance.playground */,
+				81F320881F1F18FE00BA3269 /* OptionalsPlayground.playground */,
+				81F320891F1F18FE00BA3269 /* Polymorphism.playground */,
+			);
+			name = PlayGround;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
