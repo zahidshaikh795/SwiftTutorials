@@ -146,3 +146,55 @@ if valueChanged == nil
     print("\(pi) conversion to Int does not maintain value")
 }
 
+// 8th example initializer with enumreation
+
+enum TemperatureUnit{
+    case kelvin,celcius,fahrenheit
+    init?(symbol: Character) {
+        switch symbol {
+        case "k":
+            self = .kelvin
+            case "c":
+            self = .celcius
+        case"f":
+            self = .fahrenheit
+        default:
+            return nil
+        }
+    }
+}
+
+let fahrenheitUnit = TemperatureUnit(symbol: "F")
+if fahrenheitUnit != nil {
+    print("This is a defind temperature unit,so initialization succeeded")
+}
+
+let unknownUnit = TemperatureUnit(symbol: "X")
+if unknownUnit == nil {
+    print("This is not defind temperature unit, so initialization failed")
+}
+
+// 9th example chess board design
+
+struct Chessboard {
+    let boardColors: [Bool] = {
+        var temporaryBoard = [Bool]()
+        var isBlack = false
+        for i in 1...8 {
+            for j in 1...8 {
+                temporaryBoard.append(isBlack)
+                isBlack = !isBlack
+            }
+            isBlack = !isBlack
+        }
+        return temporaryBoard    }()
+    func squareIsBlackAt(row: Int, column: Int) -> Bool {
+        return boardColors[(row * 8) + column]
+    }
+}
+
+let board = Chessboard()
+
+print(board.squareIsBlackAt(row: 0, column: 1))
+print(board.squareIsBlackAt(row: 7, column: 7))
+		
