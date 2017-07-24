@@ -198,3 +198,5 @@ let board = Chessboard()
 print(board.squareIsBlackAt(row: 0, column: 1))
 print(board.squareIsBlackAt(row: 7, column: 7))
 		
+//var currency = 10_000
+		
